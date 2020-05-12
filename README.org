@@ -1,0 +1,1 @@
+Install this Spacemacs layer by cloning it to your local layers directory, ~$HOME/.spacemacs.d/layers~.
