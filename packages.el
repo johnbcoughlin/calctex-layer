@@ -18,18 +18,18 @@
 ;;
 ;;
 ;; Briefly, each package to be installed or configured by this layer should be
-;; added to `calc-packages'. Then, for each package PACKAGE:
+;; added to `calctex-packages'. Then, for each package PACKAGE:
 ;;
 ;; - If PACKAGE is not referenced by any other Spacemacs layer, define a
-;;   function `calc/init-PACKAGE' to load and initialize the package.
+;;   function `calctex/init-PACKAGE' to load and initialize the package.
 
 ;; - Otherwise, PACKAGE is already referenced by another Spacemacs layer, so
-;;   define the functions `calc/pre-init-PACKAGE' and/or
-;;   `calc/post-init-PACKAGE' to customize the package as it is loaded.
+;;   define the functions `calctex/pre-init-PACKAGE' and/or
+;;   `calctex/post-init-PACKAGE' to customize the package as it is loaded.
 
 ;;; Code:
 
-(defconst calc-packages '((calctex :location local)))
+(defconst calctex-packages '((calctex :location local)))
 
   "The list of Lisp packages required by the calc layer.
 
@@ -58,10 +58,10 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format"
 
-(defun calc/init-calctex ()
+(defun calctex/init-calctex ()
     (use-package calctex))
 
-(defun calc/init-org-calctex ()
+(defun calctex/init-org-calctex ()
   (use-package org-calctex
     :after (calctex org)))
 
